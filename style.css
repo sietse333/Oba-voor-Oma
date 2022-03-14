@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+}
+
+header{
+    background: linear-gradient(121deg, rgba(255,255,255,1) 0%, rgb(248, 77, 77) 77%);
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 2px 14px #373737;
+
+}
+
+header img{
+    height: 10vh;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+
+section:first-of-type{
+    display: flex;
+    flex-direction: row;
+}
+
+/* filter section */
+main > section > article:first-of-type{
+    width: 30%;
+}
+
+/* content section */
+main > section > article:nth-of-type(2){
+    width: 70%;
+    margin:  0 1em 0 1em;
+
+}
+
+.filtercontainer {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #b4b4b4;
+    height: 100%;
+    margin: 1.5em;
+
+}
+/* zoekbalk en knop */
+input{
+    height: 4vh;
+    width: 80%;
+    font-size: 1.5em;
+    border-radius: .2em;
+    padding: .1em;
+    border: 2px solid gray;
+}
+
+input:hover{
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.searchcontainer{
+    text-align: center;
+}
+
+.searchcontainer button{
+    height: 5vh;
+    margin-left: 1em;
+    border-radius: .2em;
+    background: linear-gradient(121deg, rgba(255,255,255,1) 0%, rgb(248, 77, 77) 77%);
+    font-weight: bold;
+    box-shadow: 0px 2px 14px #373737;
+}
+
+.searchcontainer button:hover{
+    transform: scale(1.1);
+}
+
+.searchcontainer button:active{
+    transform: scale(.9);
+    box-shadow: 0px 0px 0px #373737;
+}
+
+
+/* boeken */
+main section article div:nth-of-type(2){
+    display: flex;
+    flex-direction: row;
+}
+main section article div article img{
+    width: 30vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+    article:first-of-type{
+        display: none;
+    }
+    article:nth-of-type(2){
+        width: 100%;
+    }
+    
+  }
