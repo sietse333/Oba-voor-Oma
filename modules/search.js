@@ -1,0 +1,23 @@
+import { getData } from './data.js'
+
+const searchBar = document.querySelector('input')
+const button = document.querySelector('#zoekKnop')
+
+
+export const search = () =>{
+    let searchTerm = searchBar.value ? searchBar.value : "boeken"
+    console.log(searchTerm)
+    const cors = "https://cors-anywhere.herokuapp.com/"
+    const endpoint = "https://zoeken.oba.nl/api/v1/search/?q="
+    const key = "6c2bd595a3ca9a65b295591f2ca09652"
+    const detail = "Default"
+    let url = `${cors}${endpoint}${searchTerm}&authorization=${key}&detaillevel=${detail}&output=json`
+    getData(url)
+ }
+
+ searchBar.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+        search()
+    }
+})
+button.addEventListener("click", () => search())

@@ -1,13 +1,24 @@
+import { renderHTML } from "./render.js"
+import { displayLoading, hideLoading } from './loading.js'
+import { sectionArea } from './render.js'
+const secret = "4289fec4e962a33118340c888699438d"
 
-export const getData = (url) =>{
-    const data = fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        renderHTML(data, () => {
-            console.log('done!')
-        })
+const config = {
+  Authorization: `Bearer ${secret}`,
+}
+
+export const getData = (url) => {
+  displayLoading()
+  fetch(url, config)
+    .then((response) => {
+        return response.json()
     })
-      .catch(err => emptyText.textContent = "Failed to load paintings please refresh the page" )
-  }
-
-  console.log(getData)
+    .then((data) => {
+        hideLoading()
+        sectionArea.innerHTML = ""
+        renderHTML(data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}

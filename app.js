@@ -1,3 +1,4 @@
-import { url } from './modules/vars.js'
 import { getData } from './modules/data.js'
+import { search } from './modules/search.js'
 
+search();

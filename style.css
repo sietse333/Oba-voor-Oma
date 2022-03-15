@@ -16,15 +16,24 @@ header img{
 
 h1{
     text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 h2{
     text-align: center;
     color: rgb(70, 70, 70);
 }
 
-section:first-of-type{
+main > section:first-of-type{
     display: flex;
     flex-direction: row;
+}
+
+article > div > section > article > p{
+    white-space: nowrap; 
+    width: 14em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 /* filter section */
@@ -63,19 +72,27 @@ input:hover{
 
 .searchcontainer{
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .searchcontainer button{
     height: 5vh;
     margin-left: 1em;
     border-radius: .2em;
-    background: linear-gradient(121deg, rgba(255,255,255,1) 0%, rgb(248, 77, 77) 77%);
+    background-color: rgb(255, 116, 116);
     font-weight: bold;
     box-shadow: 0px 2px 14px #373737;
+    color: white;
+    border: 1px solid gray
 }
 
 .searchcontainer button:hover{
     transform: scale(1.1);
+}
+
+.searchcontainer button:focus{
+    border: 4px solid gray
 }
 
 .searchcontainer button:active{
@@ -85,21 +102,54 @@ input:hover{
 
 
 /* boeken */
+
+/* box eromheen voor goeie center. werkt nog nie */
 main section article div:nth-of-type(2){
+
+
+}
+
+main > section > article > div > section{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
+
+main section article div article{
+    padding: 1em;
+    transition: .3s ease-in-out;
+}
+
+main section article div article:hover{
+    transform: scale(1.03);
+    transition: .3s ease-in-out;
+}
+
 main section article div article img{
     width: 30vh;
+    height: 40vh;
+}
+
+.skeleton{
+    background: gray;
+    width: 20em;
+    height: 20em;
+    margin: auto;
+    margin-top:1em
 }
 
 
 @media only screen and (max-width: 600px) {
-    article:first-of-type{
+    main > section > article:first-of-type{
         display: none;
     }
     article:nth-of-type(2){
         width: 100%;
+    }
+    section:first-of-type{
+        place-content: center;
     }
     
   }
