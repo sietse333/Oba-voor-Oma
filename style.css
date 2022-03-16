@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 header{
@@ -12,6 +13,10 @@ header{
 
 header img{
     height: 10vh;
+}
+
+header > button{
+    display: none;
 }
 
 h1{
@@ -37,9 +42,64 @@ article > div > section > article > p{
 }
 
 /* filter section */
+
+form > button{
+    height: 5vh;
+    width: 10vh;
+    margin-top: 1em;
+    border-radius: .7em;
+    background-color: rgb(253, 252, 252);
+    font-weight: bold;
+    box-shadow: 0px 2px 14px #373737;
+    
+}
+form > button:hover{
+    transform: scale(1.1)
+
+}
+form > button:active{
+    transform: scale(.9)
+}
+
 main > section > article:first-of-type{
     width: 30%;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1em;
+    align-items: center;
+   
+}
+
+form > label > input{
+    width: 1.7em;
+    height: 1.7em;
+    margin-left: 3vh;
+}
+
+form > label{
+    font-size: 1.8em;
+    margin: .3em;
+}
+
+form > label:hover{
+    background: rgb(228, 228, 228);
+    
+    
+}
+form > label:active{
+    background: rgb(202, 202, 202);
+    
+    
+}
+
+input[type='checkbox']:checked {
+    filter: invert(100%) hue-rotate(322deg) brightness(1.2);
+}
+
 
 /* content section */
 main > section > article:nth-of-type(2){
@@ -49,15 +109,17 @@ main > section > article:nth-of-type(2){
 }
 
 .filtercontainer {
-    display: flex;
-    justify-content: center;
     border: 1px solid #b4b4b4;
-    height: 100%;
     margin: 1.5em;
 
 }
+
+div > h3{
+    text-align: center;
+    font-size: 1.5em;
+}
 /* zoekbalk en knop */
-input{
+article > div > input{
     height: 4vh;
     width: 80%;
     font-size: 1.5em;
@@ -66,7 +128,7 @@ input{
     border: 2px solid gray;
 }
 
-input:hover{
+article > div > input:hover{
     border: 2px solid rgb(0, 0, 0);
 }
 
@@ -140,16 +202,54 @@ main section article div article img{
     margin-top:1em
 }
 
+.slideback {
+    transform: translate(-30%) !important;
+    transition: .5s ease-in-out;
+}
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 800px) {
     main > section > article:first-of-type{
-        display: none;
+        position: fixed;
+        transform: translate(-130%);
+        background: #e7302a;
+        width: 70%;
+        box-shadow: 18px 18px 27px black;
+        border-radius: 20px;
+        color: white;
     }
+    .filtercontainer{
+        border: none;
+    }
+
     article:nth-of-type(2){
         width: 100%;
     }
     section:first-of-type{
         place-content: center;
+    }
+    header > button{
+        position: absolute;
+        left: 1em;
+        top: 2em;
+        width: 2em;
+        height: 2em;
+        display: block;
+    }
+    header{
+        position: sticky;
+        top: 0;
+    }
+
+    form > label:hover{
+        background: rgb(177, 21, 21);
+        
+        
+    }
+    form > label:active{
+        background: rgb(77, 5, 5);
+        
+        
     }
     
   }

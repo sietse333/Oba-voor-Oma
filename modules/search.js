@@ -1,6 +1,7 @@
 import { getData } from './data.js'
 
-const searchBar = document.querySelector('input')
+
+const searchBar = document.querySelector("input[type='text']")
 const button = document.querySelector('#zoekKnop')
 
 

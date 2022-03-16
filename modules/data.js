@@ -15,7 +15,7 @@ export const getData = (url) => {
     })
     .then((data) => {
         hideLoading()
-        sectionArea.innerHTML = ""
+
         renderHTML(data)
     })
     .catch((err) => {

@@ -1,8 +1,9 @@
 export const sectionArea = document.querySelector('#section')
 
+
 export function renderHTML(data) {
     const results = data.results
-    
+    sectionArea.innerHTML = ""
     console.log(results)
     results.forEach((item, i) => {
       console.log(item)
