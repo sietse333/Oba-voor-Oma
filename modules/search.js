@@ -1,11 +1,11 @@
 import { getData } from './data.js'
-
+import { sectionArea } from './render.js'
 
 const searchBar = document.querySelector("input[type='text']")
 const button = document.querySelector('#zoekKnop')
 
-
 export const search = () =>{
+    sectionArea.innerHTML = ""
     let searchTerm = searchBar.value ? searchBar.value : "boeken"
     console.log(searchTerm)
     const cors = "https://cors-anywhere.herokuapp.com/"
