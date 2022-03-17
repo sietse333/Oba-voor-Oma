@@ -1,15 +1,14 @@
 export const sectionArea = document.querySelector('#section')
+export const secondapiArea = document.querySelector('#api2container')
 import { searchError } from './error.js'
 
 // Renderen van resultaten
 export function renderHTML(data) {
     const results = data.results
     sectionArea.innerHTML = ""
-    console.log(results)
     // error functie
     searchError(data)
     results.forEach((item, i) => {
-      console.log(item)
       const html = 
         `         
         <article>
@@ -40,3 +39,20 @@ export function renderHTML(data) {
         sectionArea.insertAdjacentHTML("afterbegin", html)
     })
   }
+
+
+  // Renderen van resultaten van de tweede API
+export function renderHTML2(data) {
+  const results = data.results
+  secondapiArea.innerHTML = ""
+  results.forEach((item, i) => {
+    const html = 
+      `
+        <article>
+          <p>${item.titles[0]}</p>
+          <a href="${item.detailLink}"><p>Meer informatie...</p></a>
+        </article>
+      `
+      secondapiArea.insertAdjacentHTML("afterbegin", html)
+  })
+}
