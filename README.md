@@ -6,10 +6,9 @@ This is a project i made for the Oba in Amsterdam. It uses the API from Oba to d
 
 **User story**
 
-As an older person i want to navigate the Oba website without any confusion. I also want to filter trough the different release dates of the books.
+As an older person i want to navigate the Oba website without any confusion. I also want to filter through the different release dates of the books.
 
 ![gang](https://user-images.githubusercontent.com/43068118/158881159-ba67a5a8-ce33-433e-b105-61a8146ea813.png)
-
 
 
 **How to install**
@@ -18,7 +17,7 @@ You can simply fork this project and run it on your pc. You need to run it from 
 
 **External data source?**
 
-I am using the Oba api for the content. I got this api from my teachers because the Oba and the Hva work closely together for some years.
+I am using the Oba api for the content. I got this api from my teachers because the Oba and the Hva work closely together for some years. This api is not for public use so we got private keys.
 
 **Activity diagram**
 
