@@ -235,11 +235,10 @@ main section article div article img{
     main > section > article:first-of-type{
         position: fixed;
         transform: translate(-130%);
-        background: #e7302a;
+        background: white;
         width: 70%;
         box-shadow: 18px 18px 27px black;
         border-radius: 20px;
-        color: white;
         z-index: 100;
     }
     .filtercontainer{
@@ -268,16 +267,6 @@ main section article div article img{
         z-index: 100;
     }
 
-    form > label:hover{
-        background: rgb(177, 21, 21);
-        
-        
-    }
-    form > label:active{
-        background: rgb(77, 5, 5);
-        
-        
-    }
     form{
         overflow-y: scroll;
         height: 78vh;

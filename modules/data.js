@@ -1,6 +1,7 @@
 import { renderHTML, renderHTML2 } from "./render.js"
 import { displayLoading, hideLoading } from './loading.js'
 import { laadOpties } from "./filter.js"
+const searchText = document.querySelector('h4')
 
 const searchBar = document.querySelector("input[type='text']")
 const secret = "4289fec4e962a33118340c888699438d"
@@ -21,6 +22,7 @@ export const getData = (url) => {
         laadOpties(data)
     })
     .catch((err) => {
+      searchText.textContent = "Your search is not in the database. Please try something different";
       console.log(err)
     })
 }
