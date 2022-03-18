@@ -33,3 +33,11 @@ I am using the Oba api for the content. I got this api from my teachers because 
 - I didnt have enough time to add hashing and this is definitely something i want to learn so i can press a article to go to a sepperate page with the product or book.
 - I got all the main functions i was planning to make done but i have no fun easter eggs :(
 
+**Bronnen**
+
+- Oba api geleverd door de Oba
+- https://www.w3schools.com/
+- https://stackoverflow.com/
+- https://www.oba.nl/service/word-lid.html?gclid=Cj0KCQjw29CRBhCUARIsAOboZbIvUAoT6XKKYpT8dUGK5DTe2yG5jHhtoKpLJ2H4-jN2Y0vkePakVV4aAmccEALw_wcB
+
+
