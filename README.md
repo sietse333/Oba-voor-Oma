@@ -1,4 +1,4 @@
-https://sietse333.github.io/Rijkssmuseum-project/Rijkssmuseum/
+https://sietse333.github.io/project-1-2021/
 
 **Description of project**
 
