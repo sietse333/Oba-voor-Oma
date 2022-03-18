@@ -12,7 +12,7 @@ As an older person i want to navigate the Oba website without any confusion. I a
 
 
 
-**How to instal**
+**How to install**
 
 You can simply fork this project and run it on your pc. You need to run it from a live server so if you have visual studio code you need to download the live server extension. 
 
